@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">                <!--Ajusta o tamanho da página para diferentes dispositivos móveis, necessário para que nossa página funcione bem em mobile-->
+        <title>Mirror Fashion</title>
+        <link rel="stylesheet" href="css/reset.css">                       <!--Inclui a folhas de estilos de ERIC MEYER, que reseta todos os padrões do NAVEGADOR-->
+        <link rel="stylesheet" href="css/estilos.css"> 
+        <!--[if	lt	IE	9]>
+				<script	src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    </head>
+    <body>
+        
+        <!--INICIO DO CABEÇALHO-->
+        <header class="container">                                          <!--Essa TAG é destinada para o cabeçalho-->
+            <h1><img src="img/logo.png" alt="Logo da Mirror Fashion"></h1>
+
+            <p class="sacola">
+                Nenhum item na sacola de compras</p>                        <!--CLASS tem o mesmo papel do ID, porém o class pode ser reutilizado, os IDs são mais fortes-->
+
+            <nav class="menu-opcoes">                                       <!--NAV representa blocos de navegação primários-->
+                <ul>
+                    <li><a href="#">Sua Conta</a></li>
+                    <li><a href="#">Lista de Desejos</a></li>
+                    <li><a href="#">Cartão Fidelidade</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--FIM DO CABEÇALHO. Essa TAG é destinada para o cabeçalho-->
+
+        <!--Área de destaque da página-->
+        <div class="container destaque">
+
+            <!--Inicio Busca-->
+            <section class="busca">                                         <!--Cria sessões para a página-->
+                <h2>Busca</h2>
+
+                <form>                                                      <!--capturar os dados do usuário e submetê-lo a algum serviço da Internet-->                    
+                    <input type="search">                                   <!--Recebe os dados digitados, e repassa para a tag "form", "search" para capturar os dados digitados-->
+                    <button>Buscar</button>                                 <!--Esses dados são enviados pela tag "button", que é um botão clicável que submete as informações do formulário-->
+                </form>                                                     <!--Fim do formulário-->
+            </section>
+            <!--Fim .busca-->
+
+            <!--Inicio Menu-->
+            <section class="menu-departamentos">
+                <h2>Departamentos</h2>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Blusas e Camisas</a>
+                            <ul>                                             <!--Sublista de opções-->
+                                <li><a href="#">Manga Curta</a></li>
+                                <li><a href="#">Manga Comprida</a></li>
+                                <li><a href="#">Camisa Social</a></li>
+                                <li><a href="#">Camisa Casual</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Calças</a></li>
+                        <li><a href="#">Saias</a></li>
+                        <li><a href="#">Vestidos</a></li>
+                        <li><a href="#">Sapatos</a></li>
+                        <li><a href="#">Bolsas e Carteiras</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!--Fim .menu-departamentos-->
+
+            <!--Inicio banner de destaque-->
+            <section class="banner-destaque">
+                <figure>
+                    <img src="img/destaque-home.png" alt="Promoção: Big City Night">
+                </figure>
+            </section>
+            <!--fim .banner-destaque-->
+        </div>
+            <!--fim	.container .destaque-->
+
+        <div class="container paineis">       
+            <section class="painel novidades">                               <!--os paineis de novidades e mais vendidos entrarão aqui dentro-->
+                <h2>Novidades</h2>
+                <ol>
+                    <!--Primeiro produto-->
+                    <li><a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura1.png" alt="miniatura1">   <!--Ao clicar na imagem, o usuario será redirecionado para a página do produto-->
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim do Primeiro Produto-->
+
+                    <!--Segundo Produto-->
+                    <li><a href="produto2.html">
+                        <figure>
+                            <img src="img/produtos/miniatura2.png" alt="miniatura2">
+                            <figcaption>Blusa Bad to the Bone por R$ 49,90</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim do Segundo Produto-->
+
+                    <!--Terceiro Produto-->
+                    <li><a href="produto3.html">
+                        <figure>
+                            <img src="img/produtos/miniatura3.png" alt="miniatura3">
+                            <figcaption>Jaqueta por R$ 99,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Terceiro Produto-->
+                    
+                    <!--Quarto Produto-->
+                    <li><a href="produto4.html">
+                        <figure>
+                            <img src="img/produtos/miniatura4.png" alt="miniatura4">
+                            <figcaption>Jaqueta por R$ 79,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim quarto Produto-->
+
+                    <!--Quinto Produto-->
+                    <li><a href="produto9.html">
+                        <figure>
+                            <img src="img/produtos/miniatura9.png" alt="miniatura9">
+                            <figcaption>Camisa Feminina Xadrez por R$ 59,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Quinto Produto-->
+
+                    <!--Sexto Produto-->
+                    <li><a href="produto12.html">
+                        <figure>
+                            <img src="img/produtos/miniatura12.png" alt="miniatura12">
+                            <figcaption>Camisa Social Feminina por R$ 89,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Sexto Produto-->
+                </ol>
+            </section>                                                       <!--Fim Painel de Novidades-->
+
+            <!--Painel Mais Vendidos-->
+            <section class="painel mais-vendidos">
+                <h2>Mais Vendidos</h2>
+                <ol>
+                    <!--Primeiro produto-->
+                    <li><a href="produto.html">
+                        <figure>
+                            <img src="img/produtos/miniatura1.png" alt="miniatura1">   <!--Ao clicar na imagem, o usuario será redirecionado para a página do produto-->
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim do Primeiro Produto-->
+
+                    <!--Segundo Produto-->
+                    <li><a href="produto2.html">
+                        <figure>
+                            <img src="img/produtos/miniatura2.png" alt="miniatura2">
+                            <figcaption>Blusa Bad to the Bone por R$ 49,90</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim do Segundo Produto-->
+
+                    <!--Terceiro Produto-->
+                    <li><a href="produto3.html">
+                        <figure>
+                            <img src="img/produtos/miniatura3.png" alt="miniatura3">
+                            <figcaption>Jaqueta por R$ 99,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Terceiro Produto-->
+                    
+                    <!--Quarto Produto-->
+                    <li><a href="produto4.html">
+                        <figure>
+                            <img src="img/produtos/miniatura4.png" alt="miniatura4">
+                            <figcaption>Jaqueta por R$ 79,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim quarto Produto-->
+
+                    <!--Quinto Produto-->
+                    <li><a href="produto9.html">
+                        <figure>
+                            <img src="img/produtos/miniatura9.png" alt="miniatura9">
+                            <figcaption>Camisa Feminina Xadrez por R$ 59,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Quinto Produto-->
+
+                    <!--Sexto Produto-->
+                    <li><a href="produto12.html">
+                        <figure>
+                            <img src="img/produtos/miniatura12.png" alt="miniatura12">
+                            <figcaption>Camisa Social Feminina por R$ 89,99</figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    <!--Fim Sexto Produto-->
+                </ol>
+            </section>
+        </div>                                                               <!--fim .container .paineis-->
+        
+        <!--Rodapé-->
+        <footer>
+            <div class="container">
+                <img src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+
+                <ul class="social">
+                    <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                    <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+                    <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

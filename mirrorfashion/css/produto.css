@@ -1,0 +1,177 @@
+.cores label:hover::after{
+    border: 6px solid rgba(0,0,0,0.1);
+}
+.cores{
+    position: relative;
+    padding-top: 90px;                            /*Serve para abrir espaço para as bolinhas*/
+}
+.cores legend{                                    /*Uma forma de resolver o problema do grande espaçamento no elemento <legend> no firefox*/
+    position: absolute;                           /*No firefox as bolinhas ficarão mais para baixo do que no chrome*/
+    top: 0;                                       /*No firefox o elemento <legend> não é considerado parte do <fieldset>, assim, o padding que colocamos fica muito grande nesse navegador*/
+    left: 0;
+}
+.cores label::after{                              /*Pseudo elemento = Elemento que não existe no documento mas podem ser selecionados pelo CSS. ::after = adicionar algo após a tag label*/
+    content: '';
+    display: block;
+
+    border-radius: 50%;                           /*Desenhamos as bolinhas com pseudo-elementos*/
+    width: 50px;                                  /*Usando um truque com bordas redondas grandes*/
+    height: 50px;
+    /*As bolinhas vão ser posicionadas com relação ao fieldset cores*/
+    position: absolute;                           /*Já que seus tamanhos são conhecidos*/
+    top: 30px;                                    /*30px abaixo do ponto mais alto da página*/
+
+    border: 6px solid rgba(0,0,0,0);            /*A borda ira aparecer suavemente*/
+    transition: 1s;
+
+    cursor: pointer;                              /*Faz o cursor mudar para mãozinha quando passar o mouse em cima da bolinha*/
+}
+label[for=verde]::after{                          /*Seleciona por meio do Seletor de Atributo, age em todos os elementos da tag <label> que tem o atributo for=verde*/
+    background-color: #33CC66;                  /*Após a imagem do produto de determinada cor, nesse caso da cor verde, será adicionada um background dessa mesma determinada cor, nesse caso uma na cor verde*/
+
+    /*As bolinhas estão sobrepostas na esquerda, basta colocar uma coordenada left diferente pra cada uma*/
+    left: 0;
+}
+label[for=rosa]::after{
+    background-color: #F66;                     /*#F66 = #FF6666*/
+    left: 60px;
+}
+label[for=azul]::after{
+    background-color: #6666FF;
+    left: 120px;
+}
+.cores input:checked + label::after{              /*Estilizar a Bolinha selecionada usando pseudo-classe :checked, as alterações serão feitas após o label, na bolinha da opção selecionada por conta do checked que é a opção selecionada, por conta do "+"*/
+    border: 6px solid rgba(0,0,0,0.3);          /*Adiciona a borda da Bolinha com 30% de opacidade, essa borda aparecerá na opção selecionada.Essa borda aumenta o tamanho total da bolinha por causa do box-model padrão.*/
+}
+.cores label::after{
+    box-sizing: border-box;                       /*A solução é trocar o box model com a propriedade box-sizing*/
+}
+.cores input[type=radio]{                         /*Por termos as bolinhas visuais configuradas, escondemos a bolinha do input radio, já que a mesma se torna desnecessária*/
+    display: none;
+}
+.cores input:not(:checked) + label img{           /*Selecione todos os labels img que não estão selecionados(:checked)*/
+    display: none;                                /*Esconda-os*/
+}
+.cores label img{                                 /*Solução responsiva para que as imagens se adaptem ao tamanho da tela, já que as vezes usamos imagens maiores*/
+    display: block;                               /*e quando a tela é pequena, a imagem fica "vazando" pra fora do elemento pai*/
+    max-width: 100%;
+    border: 2px solid #CCC;
+}
+.produto{
+    color: #333;
+    line-height: 1.3;                             /*Altura da linha/Distância entre uma linha e outra*/
+    margin-top: 2em;                              /*Distância entre o conteudo do elemento produto e o cabeçalho*/
+}
+.produto h1{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.produto p{
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+.produto legend{
+    display: block;
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+.comprar{
+    background: #91BD3C;
+    border: none;
+    color: #333;
+
+    font-size: 1.4em;
+    text-transform: uppercase;
+
+    box-shadow: 0 1px 3px #777;
+
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+}
+.detalhes{
+    padding: 2em 0;
+}
+.detalhes h2{
+    font-size: 1.5em;
+    line-height: 2;
+}
+.detalhes p{
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+}
+table{
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+thead{
+    background-color: #999;
+}
+thead th{
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+td{
+    padding: 0.3em;
+}
+tr:nth-child(2n){                               /*Pseudo-Classe nth:child = recebe uma expressão aritmética para indicar quais indices selecionar*/
+    background-color: #CCC;                   /*Seleciona os "tr = linhas" pares e aplicam o background*/
+}
+td:first-child{                                 /*Seleciona o Primeiro elemento FIlho, todos os primeiros "td" dos "tr"*/
+    font-style: italic;
+}
+.produto-back{
+    background-color: #F2F2F2;
+    margin-top: 1em;
+    border-top: 2px solid #CCC;
+}
+
+@media (min-width: 500px){
+    .detalhes{
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 630px){
+    .produto{
+        position: relative;                       /*A foto vai se posicionar absolutamente com relação a esse elemento, por isso preciso estar posicionando*/
+
+        padding-left: 40%;                        /*Deixar 40% de espaço em branco na esquerda para a foto ocupar*/
+
+        font-size: 1.2em;                         /*Basta aumentar a fonte do elemento pai, tudo mais irá escalar proporcionalmente*/
+    }
+    .cores{
+        position: static;                         /*Estava relative antes; reinicio para static para evitar que a foto se posicione com relação a mim*/
+
+        padding: 0;                               /*Zerando o padding-top que tinha antes e não preciso mais*/
+    }
+    .cores legend{
+        position: static;                         /*Estava absolute antes, para ter o mesmo comportamento no Chrome e no Firefox; agora podemos voltar ao fluxo da página*/
+    }
+    .cores label img{
+    position: absolute;                           /*Imagem se posiciona absolutamente à esquerda com relação ao .produto*/
+    top: 0;
+    left: 0;
+
+    max-width: 35%;                               /*Evita que a imagem vaze para fora do*/
+    max-height: 100%;                             /*espaço que lhe foi determinado*/
+    }
+    .cores label::after{
+        position: static;                         /*As bolinhas coloridas tinham posição absoluta e não precisamos mais, basta flutuar um do lado da outra*/
+        float: left;
+
+        margin-right: 10px;
+    }
+    fieldset{                                     /*Os dois fieldset ficam alinhados um ao lado do outro*/
+        display: inline-block;
+        vertical-align: top;
+
+        margin: 1em 0;
+        min-width: 240px;
+        width: 45%;
+    }
+}

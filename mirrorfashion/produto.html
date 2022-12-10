@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Mirror Fashion</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/produto.css">
+    </head>
+    <body>
+        <header class="container">                                          <!--Essa TAG é destinada para o cabeçalho-->
+            <h1><img src="img/logo.png" alt="Logo da Mirror Fashion"></h1>
+
+            <p class="sacola">
+                Nenhum item na sacola de compras</p>                        <!--CLASS tem o mesmo papel do ID, porém o class pode ser reutilizado, os IDs são mais fortes-->
+
+            <nav class="menu-opcoes">                                       <!--NAV representa blocos de navegação primários-->
+                <ul>
+                    <li><a href="#">Sua Conta</a></li>
+                    <li><a href="#">Lista de Desejos</a></li>
+                    <li><a href="#">Cartão Fidelidade</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Adicionar o conteudo da página-->
+        <div class="produto-back">
+            <div class="container">
+                <div class="produto">
+                <h1>Fuzzy Cardigan</h1>
+                <p>por apenas R$ 129,90</p>
+
+                <form>                                                                                       <!--Formulário de compra, entre diversas opções-->
+                    <fieldset class="cores">                                                                 <!--Agrupa os Inputs que represantam a mesma coisa-->
+                        <legend>Escolha a cor:</legend>                                                      <!--Além de que o mesmo recebe um <legend> uma legenda de texto apropriada-->
+
+                            <input type="radio" name="cor" value="verde" id="verde" checked>                 <!--Checked nos serve para indicar qual dos radio buttons tem que estar selecionado por padrão. Representa uma opção de cor de roupa, nesse caso a cor verde-->
+                            <label for="verde">                                                              <!--Texto que descreve cada opção-->
+                                <img src="img/produtos/foto1-verde.png" alt="Produto na cor Verde">          <!--Ao invés de mostrar o nome da cor verde no label, colocamos a foto de verdade da roupa naquela cor-->
+                            </label>
+
+                            <input type="radio" name="cor" value="rosa" id="rosa">
+                            <label for="rosa">
+                                <img src="img/produtos/foto1-rosa.png" alt="Produto na cor Rosa">
+                            </label>
+
+                            <input type="radio" name="cor" value="azul" id="azul">
+                            <label for="azul">
+                                <img src="img/produtos/foto1-azul.png" alt="Produto na cor Azul">
+                            </label>
+                    </fieldset>
+
+                    <fieldset class="tamanhos">                                                              <!--Slider numérico, step = indica de quanto em quanto o número deve pular, value = valor inicial do input-->
+                        <legend>Escolha o tamanho:</legend>
+
+                        <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+                        <output for="tamanho" name="valortamanho">42</output>                                <!--Representa a saída de algum cálculo ou valor simples obtido a partir de um ou mais capmpos de um formulário -->
+                    </fieldset>
+
+                    <button class="comprar">Comprar</button>                                                 <!--Adicionamos o botão de SUBMIT, para enviar a escolha da compra-->
+                </form>
+                </div>
+
+                <div class="detalhes">
+                    <h2>Detalhes do Produto</h2>
+
+                    <p>Esse é o melhor casaco de Cardigã que você já viu. Exelente
+                    material italiano com estampa desenhada pelos artesãos da
+                    comunidade de Krotor nas ilhas gregas. Compre já e receba hoje
+                    mesmo pela nossa entrega a jato.</p>
+
+                    <table>
+                    <thead>
+                        <tr>                                                <!--Titulos das colunas-->
+                            <th>Característica</th>                         <!--Coluna 1-->
+                            <th>Detalhe</th>                                <!--Coluna 2-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>                                                <!--Linha 1. Conteudo das colunas-->
+                            <td>Modelo</td>                                 <!--Linha 1. Coluna 1-->
+                            <td>Cardigã 7845</td>                           <!--Linha 1. Coluna 2-->
+                        </tr>
+                        <tr>                                                <!--Linha 2-->
+                            <td>Material</td>                               <!--Linha 2. Coluna 1-->
+                            <td>Algodão e Poliester</td>                    <!--Linha 2. Coluna 2-->
+                        </tr>
+                        <tr>                                                <!--Linha 3-->
+                        <td>Cores</td>                                      <!--Linha 3. Coluna 1-->
+                        <td>Azul, Rosa e Verde</td>                         <!--Linha 3. Coluna 2-->
+                        </tr>
+                        <tr>                                                <!--Linha 4-->
+                            <td>Lavagem</td>                                <!--Linha 4. Coluna 1-->
+                            <td>Lavar a mão</td>                            <!--Linha 4. Coluna 2-->
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <img src="img/logo-rodape.png" alt="Logo Mirror Fashion">
+
+                <ul class="social">
+                    <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                    <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+                    <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/produto.js"></script>
+    </body>
+</html>

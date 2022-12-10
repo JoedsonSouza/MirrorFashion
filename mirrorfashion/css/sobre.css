@@ -1,0 +1,218 @@
+/*#rodape{
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+#rodape img{
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}*/
+body{
+    color: #333333;                                                /*Designa qual será a cor do texto, já que todo o texto está contido no "body"*/
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /*Designa quais serão as familias ou as fontes do texto.*/
+    margin-left: auto;                                               /*As margens da direita se adequarão de acordo com o espaço livre de acordo com a largura do "body"*/
+    margin-right: auto;                                              /*As margens da direita se adequarão de acordo com o espaço livre de acordo com a largura do "body"*/
+} 
+.h1{
+    background-image: url(/img/sobre-background.jpg);                /*Adicionou-se essa imagem como Background dos titulos h1*/
+    padding: 10px;                                                   /*Espaçamento interno, entre sua borda e seu conteúdo*/
+}
+h2{
+    border-bottom: 2px solid #333333;                              /*Adicionou-se uma borda sutil embaixo dos subtitulos h2*/
+    margin-top: 30px;                                                /*Espaçamentos externos após o limite do elemento*/
+}
+figure{
+    background-color: #f2eded;                                     /*Fundo da img ficará cinza*/
+    border-bottom: 1px solid #ccc;
+    text-align: center;                                              /*A imagem e a legenda ficarão centralizadas*/
+    padding: 15px;
+    margin: 30px;
+}
+figcaption{
+    font-style: italic;                                              /*A legenda ficará em itálico*/
+    margin-top: 10px;
+}
+p{
+    padding: 0 45px;
+    text-indent: 15px;                                               /*Tamanho da margem da primeira linha do texto*/
+}
+#centro-distribuicao{                                                /*Somente a tag que estiver com esse ID sofrerá alterações*/
+    margin-left: auto;                                               /*As margens da esquerda se adequarão de acordo com o espaço livre*/
+    margin-right:auto;                                               /*As margens da direita se adequarão de acordo com o espaço livre*/
+    width: 550px;                                                    /*A Largura da imagem será essa*/
+}
+#familia-pelho{
+    float: right;                                                    /*Flutuação para o lado direito, faazendo	com	que	o elemento parágrafo o contorne*/
+    margin: 0 0 10px 10px;
+}
+p::first-letter{                                                     /*Seletor de pseudo elemento, seleciona a primeira letra de cada parágrafo*/
+    font-weight: bold;                                               /*A primeira letra de cada parágrafo ficara em negrito*/
+}
+h1 + p{                                                              /*Seletor de irmão adjacente, seleciona o primeiro parágrafo após o h1, já que, ele é um irmão dele (estão sob a mesma tag pai), e aparece logo após o mesmo*/
+    text-indent: 0;                                                  /*O primeiro parágrafo ficara sem indentação*/
+}
+:not(p) + p::first-line{                                             /*Seleciona a primeira linha do parágrafo que não é antecedida de um parágrafo*/
+    font-variant: small-caps;
+}
+
+/*HEADER*/
+
+.sacola{
+    background-image: url(/img/sacola.png); /*A sacola ira aparecer como uma imagem de fundo para o parágrafo*/
+    background-repeat: no-repeat;
+    background-position: top right;    /*A sacola se posicionara em cima no canto direito*/
+
+    font-size: 14px;                   /*Esse será o tamanho do texto*/
+    padding-right: 35px;               /*A sacola terá esse espaçamento interno da sua borda*/
+    padding-top: 8px;                  /*Faz com que os objetos abaixo dela se afastem 8px*/
+    text-align: right;
+    width: 140px;                      /*O texto tem essa largura*/
+    position: absolute;                /*Toma como referência o seu elemento pai na estrutura HTML, o HEADER*/
+    top: 0;                            /*Ficará posicionado a cima de sua referência, o cabeçalho*/
+    right: 0;                          /*Ficará posicionado a direita de sua referência, o cabeçalho*/
+}
+.menu-opcoes ul{
+    font-size: 15px;
+}
+.menu-opcoes a{
+    color: #003366;
+}
+.menu-opcoes ul li{                    /*O INLINE permitira que outros elementos em linha possam ser renderizados logo na sequência*/
+    display: inline;                   /*A lista tem por padrão o valor BLOCK, ocupando toda a largura do documento*/
+    margin-left: 20px;
+}
+.container{
+    margin: 0 auto;                    /*As Margens de cima e baixo são 0, já as da esquerda e direita se adequarão com o espaço disponivel no monitor, respeitando a largura da Página*/
+    width: 940px;                      /*Largura da Pagina "Sobre" e de tudo que possuir a CLASS .container*/
+}
+header{
+    position: relative;                /*Permite que eu possa posicionar o cabeçalho em qualquer local da Página de forma manual*/
+}
+.menu-opcoes{
+    position: absolute;                /*Toma como referência o seu elemento pai na estrutura HTML*/
+    bottom: 0;                         /*Ficará posicionado a baixo de sua referência, o cabeçalho*/
+    right: 0;                          /*Ficará posicionado a direita de sua referência, o cabeçalho*/
+}
+.menu-opcoes a:hover{                  /*":hover - representa o momento em que o usuário está com o mouse em cima do elemento" é uma pseudo-classe de estado que representa estados dos elementos*/
+    color: #007DC6;                  /*Altera a cor do elemento no momento que o usuário está com o mouse em cima do mesmo*/
+}
+.menu-opcoes a:active{                 /*seleciona o link no exato momento em que clicamos nele*/
+    color: #867DC6;
+}
+/*FIM HEADER*/
+
+/*FOOTER*/
+footer{
+    background-image: url(/img/fundo-rodape.png);
+    clear: both;                        /*Impede que o rodapé flutue a esquerda ou a direita dos elementos que estão flutuando*/
+    padding: 20px 0;
+}
+footer .container{
+    position: relative;
+}
+.social{
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+.social li{
+    float:left;
+    margin-left: 25px;
+}
+.social a{
+    /*Tamanho da Imagem*/
+    height: 32px;
+    width: 32px;
+    /*Image replacement*/
+    display:block;
+    text-indent: -9999px;               /*Faz o texto ser renderizado fora da página*/
+}
+.social a[href*="facebook.com"] {                           /*"[seletor de atributo]"Busca por .social a com valor do atributo "href" contendo "facebook.com" em qualquer posição*/
+    background-image: url(/img/facebook.png);    /*A miniatura do Facebook fica como background do link, se tornando clicável*/
+}
+.social a[href*="twitter.com"] {
+    background-image: url(/img/twitter.png);
+}
+.social a[href*="plus.google.com"]{
+    background-image: url(/img/googleplus.png);
+}
+/*FIM FOOTER*/
+
+/*Adaptação Mobile para CSS*/
+
+@media (max-width: 939px){
+    
+    .container{
+        width: 96%;
+    }
+    header h1{
+        text-align: center;
+    }
+    header h1 img{
+        max-width: 50%;
+    }
+    .sacola{
+        display: none;
+    }
+    .menu-opcoes{
+        position: static;
+        text-align: center;
+    }
+    .menu-opcoes ul li{
+        display: inline-block;
+        margin: 5px;
+        position: right;
+    }
+    figure{
+        background-color: #f2eded;                                     /*Fundo da img ficará cinza*/
+        border-bottom: 1px solid #ccc;
+        text-align: center;                                              /*A imagem e a legenda ficarão centralizadas*/
+        padding: 7px;
+        margin: 15px;
+    }
+    #centro-distribuicao,
+    figure img{
+        width: 90%;
+    }
+    #familia-pelho{
+        display: block;
+        max-width: 50%;
+    }
+    p{
+        padding: 0 30px;
+    }
+    @media (min-width: 480px){
+        header h1{
+            margin: 5px 0;
+        }
+        @media (min-width: 720px){
+            header h1{
+                text-align: left;
+            }
+            .menu-opcoes{
+                position: absolute;
+            }
+            .sacola{
+                display: block;
+            }
+            figure{
+                background-color: #f2eded;                                     /*Fundo da img ficará cinza*/
+                border-bottom: 1px solid #ccc;
+                text-align: center;                                              /*A imagem e a legenda ficarão centralizadas*/
+                padding: 15px;
+                margin: 30px;
+            }
+            #centro-distribuicao,
+            figure img{
+                width: 90%;
+            }
+            #familia-pelho{
+                width: 50%;
+            }
+            p{
+                padding: 0 45px;
+            }
+        }
+    }
+}

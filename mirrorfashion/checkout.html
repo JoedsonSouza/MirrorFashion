@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Checkout Mirror Fashion</title>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/open-iconic-bootstrap.css">
+    </head>
+    <body>
+        <!--fixed-top = faz com que o menu fica fixo no topo mesmo com scroll-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">                      <!--NAVBAR é um menu superior do BOOTSTRAP, é um menu completo e relativamente fácil .. Trocamos as classes navbar-lighr e bg-light pelas classesa navbar-dark e bg-dark para usarmos um esquema de cores mais escuro-->
+            <button class="navbar-toggler" type="button"
+                              data-toggle="collapse" data-target="#navbarToggleExternalContent"> <!--Cria icone que ativa o menu, usando a data-target para fazer uma ligação entre o botão e a div-->
+                <span class="navbar-toggler-icon"></span>                                        <!--Icone do Hamburguer-->
+            </button>  
+            <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">              <!--Faz uma ligação entre a div e o button e junta as opções em uma espécie de dropdown que só abre quando ativado. Isso é, criar um botão para ativar o menu (famoso icone de sanduiche), só funciona em telas menores-->
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ajuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Perguntas frequentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entre em contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+
+            <div class="container">
+                <h1 class="display-4">Ótima escolha!</h1>
+                <p class="lead">Obrigado por comprar na Mirror Fashion!
+                Preencha seus dados para efetivar a compra.</p>
+            </div>                                                 <!--Fim .container dentro do jumbotron-->
+
+        </div>                                                     <!--Fim .jumbotron-->
+        
+        <div class="container">                                    <!--Cartão arredondado com título em destaque no topo-->
+
+            <!--...Card Aqui...-->
+
+            <div class="row">                                      <!--É necessária para o grid funcionar, e para que o layout fique correto-->
+                                                                   <!--O Grid BOOTSTRAP trabalha com 12 colunas, que ajuda no posicionamento dos elementos, dividi=-se a tela em colunas e vamos encaixando os elementos nesse grid-->
+                <div class="col-md-4 col-xl-3">                    <!--col-md-4 = indica que o cartão ocupará 4/12 da tela, em telas>=768px-->                                              
+                    <div class="card mb-3">                        <!--A serie col-xl aplica em resoluções acima de 1200px-->
+
+                        <div class="card-header">
+                            <h2>Sua Compra</h2>
+                        </div>                                                 <!--Fim .card-header-->
+            
+                        <div class="card-body">
+                <!--Imagem do Produto-->
+                    <img src="img/produtos/foto1-verde.png" alt="Fuzzy Cardigan"
+                            class="img-thumbnail mb-3">                <!--img-thumbnail = imagem ficar flexível e nunca estourar o tamanho do pai; imagem fica centralizada e com uma borda de destaque.-->
+                                                                       <!--mb-3 = adiciona uma pequena margem na parte inferior da imagem-->
+
+                    <!--Aqui vai o <dl> que já temos-->
+                    <dl>                                               <!--Lista de definição, utilizada para demarcar um glossário-->
+                        <dt>Produto</dt>                               <!--Termo a ser especificado / definido-->
+                        <dd>Fuzzy Cardigan</dd>                        <!--Definição do Termo-->
+        
+                        <dt>Cor</dt>
+                        <dd>Verde</dd>
+        
+                        <dt>Tamanho</dt>
+                        <dd>40</dd>
+        
+                        <dt>Preço</dt>
+                        <dd>R$ 129,90</dd>
+                    </dl>
+                
+                        </div>                                                 <!--Fim .card-body-->
+                    </div>                                                     <!--Fim .card-->
+                </div>                                                         <!--Fim Grid col-md-4-->
+
+                <form class="col-md-8 col-xl-9">                               <!--Formulário de compra do Usuario / .col-md-8 = indica que o formulário ocupará 8/12 da tela, em telas>=768px-->
+
+                    <div class="row">
+
+                        <fieldset class="col-lg-6">                            <!--col-lg-6 = indica que o formulário ocupará 6/12 da tela, em telas>=992px-->
+                            <legend>Dados pessoais</legend>
+
+                            <div class="form-group">                           <!--Nome do Usuario-->
+                                <label for="nome">Nome completo</label>        <!--"autofocus" indica que aquele campo deve iniciar com foco quando a página for carregada. O usuário já pode começar a digitar algo sem nenhum clique-->
+                                <input type="text" class="form-control" id="nome" name="nome" autofocus required>
+                            </div>                                             <!--validação "required" informa quando um campo é de preenchimento obrigatório -->
+
+                            <div class="form-group">                           <!--Email do Usuario-->
+                                <label for="email">Email</label>               <!--Texto que descreve a opção do formulário-->
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>       <!--Adiciona o caractere "@" com um background color após o label-->  
+                                    </div>                                     
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                            placeholder="email@exemplo.com">         <!--O atributo "placeholder" exibe o texto contido em seu valor dentro do elemento do formulário caso o seu valor seja vazio-->
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">                            <!--CPF do Usuario-->
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                            </div>
+
+                            <!--Um checkbox para o usuario optar ou não por receber newsletter-->
+                            <div class="form-group custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="newsletter"
+                                                value="sim" checked>
+                                <label class="custom-control-label" for="newsletter">
+                                    Quero receber newsletter da Mirror Fashion
+                                </label>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset class="col-lg-6">
+                            <legend>Cartão de crédito</legend>
+
+                            <div class="form-group">                       <!--Numero do Cartão de Crédito-->
+                                <label for="numero-cartao">Número - CVV</label>
+                                <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+                            </div>
+
+                            <div class="form-group">                                          <!--Bandeira do Cartão-->
+                                <label for="bandeira-cartao">Bandeira</label>
+                                <select class="custom-select" id="bandeira-cartao">           <!--Permite que o usuario selecione entre diversas opções, em sua configuração (como esta agora), o select exibe o que conhecemos como menu drop-down, permitindo selecionar apenas uma  das opções-->
+                                    <option disabled selected>Selecione uma opção...</option> <!--essa oção está desativada servindo apenas como um texto informativo, ela aparece selecionada até que o usuario escolha a bandeira do cartão-->
+                                    <option value="master">MasterCard</option>
+                                    <option value="visa">VISA</option>
+                                    <option value="amex">American Express</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">                                           <!--Data de validade do Cartão-->
+                                <label for="validade-cartao">Validade</label>                  <!--Texto que descreve a opção-->
+                                <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+                            </div>
+
+                        </fieldset>
+                    </div>                                                                 <!--Fim .row-->
+
+                        <!--Botão Confirmar Pedido-->
+                    <button type="submit" class="btn btn-primary btn-lg">                  <!--Quando acionado, inicia a chamada que envia as informações do formulário para o endereço indicado no atributo "action" do <form>-->
+                        <span class="oi oi-thumb-up"></span>                               <!--Adiciona um ICON do open-iconic-bootstrap.css-->
+                        Confirmar Pedido
+                    </button>
+                </form>
+
+            </div>                                                                     <!--Fim .row / grid-->
+        </div>                                                                         <!--Fim .container da pagina-->
+
+        <!--O botão aparece mas não funciona quando clicado. Essa funcionalidade é implementada com JavaScript do Bootstrap-->
+        <script type="text/javascript" src="js/jquery.js"></script>                    <!--Script / Arquivo do jQuery-->
+        <script type="text/javascript" src="js/bootstrap.js"></script>                 <!--Script / Arquivo do Bootstrap-->
+    </body>
+</html>
